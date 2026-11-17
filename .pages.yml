@@ -1,0 +1,589 @@
+{
+  "media": {
+    "input": "public/uploads",
+    "output": "/uploads"
+  },
+  "content": [
+    {
+      "name": "site",
+      "label": "Site settings",
+      "type": "file",
+      "path": "src/data/site.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "councilName",
+          "label": "Councilname",
+          "type": "string"
+        },
+        {
+          "name": "headline",
+          "label": "Headline",
+          "type": "string"
+        },
+        {
+          "name": "introduction",
+          "label": "Introduction",
+          "type": "text"
+        },
+        {
+          "name": "heroImage",
+          "label": "Hero image",
+          "type": "image"
+        },
+        {
+          "name": "heroAlt",
+          "label": "Image description",
+          "type": "string"
+        },
+        {
+          "name": "schoolUrl",
+          "label": "School url",
+          "type": "string"
+        },
+        {
+          "name": "instagramUrl",
+          "label": "Instagram url",
+          "type": "string"
+        },
+        {
+          "name": "contactEmail",
+          "label": "Contactemail",
+          "type": "string"
+        },
+        {
+          "name": "volunteerUrl",
+          "label": "Volunteer url",
+          "type": "string"
+        },
+        {
+          "name": "footerText",
+          "label": "Footertext",
+          "type": "text"
+        },
+        {
+          "name": "seoTitle",
+          "label": "Seo title",
+          "type": "string"
+        },
+        {
+          "name": "seoDescription",
+          "label": "Seo description",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "project-play",
+      "label": "Project Play",
+      "type": "file",
+      "path": "src/data/project-play.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "tagline",
+          "label": "Tagline",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "name": "story",
+          "label": "Story",
+          "type": "text"
+        },
+        {
+          "name": "heroImage",
+          "label": "Hero image",
+          "type": "image"
+        },
+        {
+          "name": "heroAlt",
+          "label": "Image description",
+          "type": "string"
+        },
+        {
+          "name": "goal",
+          "label": "Fundraising goal (CAD)",
+          "type": "number",
+          "description": "Leave empty until confirmed. Enter a non-negative CAD amount."
+        },
+        {
+          "name": "raised",
+          "label": "Amount raised (CAD)",
+          "type": "number",
+          "description": "Leave empty until confirmed. Enter a non-negative CAD amount."
+        },
+        {
+          "name": "lastUpdated",
+          "label": "Lastupdated",
+          "type": "date",
+          "options": {
+            "format": "yyyy-MM-dd"
+          }
+        },
+        {
+          "name": "deadline",
+          "label": "Deadline",
+          "type": "date",
+          "options": {
+            "format": "yyyy-MM-dd"
+          }
+        },
+        {
+          "name": "ctaLabel",
+          "label": "Ctalabel",
+          "type": "string"
+        },
+        {
+          "name": "ctaUrl",
+          "label": "Approved donation URL",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "type": "select",
+          "options": {
+            "values": [
+              "Planning",
+              "Active",
+              "Completed"
+            ]
+          }
+        },
+        {
+          "name": "showProgress",
+          "label": "Show confirmed fundraising progress",
+          "type": "boolean"
+        },
+        {
+          "name": "seoTitle",
+          "label": "Seo title",
+          "type": "string"
+        },
+        {
+          "name": "seoDescription",
+          "label": "Seo description",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "initiatives",
+      "label": "Initiatives",
+      "type": "collection",
+      "path": "src/content/initiatives",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image"
+        },
+        {
+          "name": "imageAlt",
+          "label": "Imagealt",
+          "type": "string"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "label": "Link URL",
+          "type": "string"
+        },
+        {
+          "name": "ctaLabel",
+          "label": "Ctalabel",
+          "type": "string"
+        },
+        {
+          "name": "featured",
+          "label": "Featured",
+          "type": "boolean"
+        },
+        {
+          "name": "visible",
+          "label": "Visible",
+          "type": "boolean"
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "milestones",
+      "label": "Milestones",
+      "type": "collection",
+      "path": "src/content/milestones",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "options": {
+            "format": "yyyy-MM-dd"
+          }
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "type": "select",
+          "options": {
+            "values": [
+              "Upcoming",
+              "In Progress",
+              "Completed"
+            ]
+          }
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "type": "number"
+        },
+        {
+          "name": "visible",
+          "label": "Visible",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "fundraising-actions",
+      "label": "Fundraising Actions",
+      "type": "collection",
+      "path": "src/content/fundraising-actions",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image"
+        },
+        {
+          "name": "imageAlt",
+          "label": "Imagealt",
+          "type": "string"
+        },
+        {
+          "name": "ctaLabel",
+          "label": "Ctalabel",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "label": "Link URL",
+          "type": "string"
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "type": "number"
+        },
+        {
+          "name": "active",
+          "label": "Active",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "label": "Events",
+      "type": "collection",
+      "path": "src/content/events",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "name": "start",
+          "label": "Start",
+          "type": "date",
+          "options": {
+            "time": true,
+            "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+          }
+        },
+        {
+          "name": "end",
+          "label": "End",
+          "type": "date",
+          "options": {
+            "time": true,
+            "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+          }
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "label": "Link URL",
+          "type": "string"
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image"
+        },
+        {
+          "name": "imageAlt",
+          "label": "Imagealt",
+          "type": "string"
+        },
+        {
+          "name": "visible",
+          "label": "Visible",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "announcements",
+      "label": "Announcements",
+      "type": "collection",
+      "path": "src/content/announcements",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "options": {
+            "format": "yyyy-MM-dd"
+          }
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image"
+        },
+        {
+          "name": "imageAlt",
+          "label": "Imagealt",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "label": "Link URL",
+          "type": "string"
+        },
+        {
+          "name": "published",
+          "label": "Published",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "updates",
+      "label": "Updates",
+      "type": "collection",
+      "path": "src/content/updates",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "date",
+          "options": {
+            "format": "yyyy-MM-dd"
+          }
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "name": "image",
+          "label": "Image",
+          "type": "image"
+        },
+        {
+          "name": "imageAlt",
+          "label": "Imagealt",
+          "type": "string"
+        },
+        {
+          "name": "published",
+          "label": "Published",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "quick-links",
+      "label": "Quick Links",
+      "type": "collection",
+      "path": "src/content/quick-links",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "label": "Link URL",
+          "type": "string"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "type": "string"
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "type": "number"
+        },
+        {
+          "name": "visible",
+          "label": "Visible",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "faqs",
+      "label": "Faqs",
+      "type": "collection",
+      "path": "src/content/faqs",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "question"
+      },
+      "fields": [
+        {
+          "name": "question",
+          "label": "Question",
+          "type": "string"
+        },
+        {
+          "name": "answer",
+          "label": "Answer",
+          "type": "text"
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "type": "number"
+        },
+        {
+          "name": "visible",
+          "label": "Visible",
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}
