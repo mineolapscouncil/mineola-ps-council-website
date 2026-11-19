@@ -1,4 +1,4 @@
 ---
 import site from '../data/site.json';
 ---
-<header><a class="brand" href="/" aria-label="Mineola PS Council home"><span class="mark" aria-hidden="true">m<span>✳</span></span><span>Mineola PS<br/><strong>Council</strong></span></a><nav aria-label="Main navigation"><a href="/project-play/">Project Play</a><a href="/#initiatives">Initiatives</a><a href="/#get-involved">Get involved</a></nav><a class="button small" href="/project-play/#support">Support Project Play <span aria-hidden="true">↗</span></a></header>
+<header><a class="brand" href="/">Mineola PS <strong>Council</strong><span aria-hidden="true">✳</span></a><nav aria-label="Main navigation"><a href="/project-play/" aria-current={Astro.url.pathname.startsWith('/project-play')?'page':undefined}>Project Play</a><a href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram ↗</a></nav></header>

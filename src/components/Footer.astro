@@ -1,6 +1,4 @@
 ---
 import site from '../data/site.json';
-import {entries,safeUrl} from '../lib/content';
-const links=entries('quick-links');
 ---
-<footer><div class="footer-top"><h2>Good things grow<br/>when we come together.</h2><div><a href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Council Instagram ↗</a><a href={site.schoolUrl} target="_blank" rel="noopener noreferrer">Official school website ↗</a>{site.contactEmail && <a href={'mailto:'+site.contactEmail}>Contact council</a>}</div></div><p>{site.footerText}</p><div class="quicklinks">{links.filter(l=>safeUrl(l.url)).map(l=><a href={safeUrl(l.url)}>{l.title} ↗</a>)}</div><div class="fine"><span>© {new Date().getFullYear()} {site.title}</span><span>This is a school council website, separate from the official Peel District School Board website.</span><a href="/privacy/">Privacy & accessibility</a></div></footer>
+<footer><span>© {new Date().getFullYear()} {site.councilName}</span><span>Our council website. <a href={site.schoolUrl} target="_blank" rel="noopener noreferrer">Visit the official school website ↗</a></span><a href="/privacy/">Privacy & accessibility</a></footer>
