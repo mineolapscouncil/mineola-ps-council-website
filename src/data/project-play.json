@@ -1,18 +1,11 @@
 {
   "title": "Project Play",
-  "tagline": "A little help. A whole lot of play.",
-  "description": "Help us build a new place to play.",
-  "story": "Our old playground needs replacing. Together, we\u2019re raising money for a new place for Mineola kids to play.",
-  "heroImage": "",
-  "heroAlt": "",
-  "goal": null,
-  "raised": null,
-  "lastUpdated": "",
-  "deadline": "",
+  "story": "Our old playground needs replacing. Together, we’re raising money for a new place for Mineola kids to play.",
+  "goal": 100000,
+  "raised": 35000,
+  "lastUpdated": "2026-11-19",
   "ctaLabel": "Support Project Play",
-  "ctaUrl": "",
-  "status": "Planning",
-  "showProgress": false,
+  "showProgress": true,
   "seoTitle": "Project Play | Mineola PS Council",
   "seoDescription": "Help the Mineola school community create a new place to play. Follow campaign news and ways to support Project Play."
 }
