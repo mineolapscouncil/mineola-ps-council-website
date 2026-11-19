@@ -14,6 +14,6 @@ const external=url.startsWith('http');
       </svg>}
     </span>}
   </span>}
-  <span class="home-card-copy">{card.eyebrow&&<span class="eyebrow">{card.eyebrow}</span>}<h2>{card.title}</h2>{card.description&&<span>{card.description}</span>}</span>
-  <span class="arrow" aria-hidden="true">→</span>
+  <span class="home-card-copy">{card.eyebrow&&<span class="eyebrow">{card.eyebrow}</span>}<h2>{card.title}{card.style==='Secondary'&&<span class="secondary-title-arrow" aria-hidden="true">→</span>}</h2>{card.description&&<span>{card.description}</span>}</span>
+  {card.style!=='Secondary'&&<span class="arrow" aria-hidden="true">→</span>}
 </a>}
