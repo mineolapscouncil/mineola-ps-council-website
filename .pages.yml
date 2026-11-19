@@ -50,6 +50,13 @@
           "name": "seoDescription",
           "label": "Seo description",
           "type": "text"
+        },
+        {
+          "name": "secondaryCardsHeading",
+          "label": "Secondary cards heading",
+          "type": "string",
+          "description": "Heading above secondary homepage cards.",
+          "required": true
         }
       ]
     },
