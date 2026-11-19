@@ -5,3 +5,5 @@
 .brand{display:block;flex-shrink:0}.brand img{display:block;width:76px;height:auto}.landing-logo{display:block;width:210px;max-width:55vw;height:auto;margin:0 auto 30px}.landing{padding-top:42px}@media(max-width:600px){.brand img{width:62px}.landing-logo{width:170px;margin-bottom:25px}.landing{padding-top:32px}}
 
 .project-symbol{display:flex;width:76px;flex-shrink:0}.project-symbol svg{display:block;width:100%;height:auto}@media(max-width:600px){.project-symbol{width:50px}}
+
+.instagram-link{display:inline-flex;align-items:center;justify-content:center;gap:9px}.instagram-icon{display:block;width:19px;height:19px;flex-shrink:0}.nav-instagram{margin:0;padding:12px 0;text-decoration:none;font-size:inherit}@media(max-width:600px){nav{gap:13px}.nav-instagram{max-width:145px;text-align:left}.nav-instagram span{line-height:1.3}.nav-instagram .instagram-icon{width:17px;height:17px}}
