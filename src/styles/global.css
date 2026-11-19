@@ -3,3 +3,5 @@
 
 /* Council-provided logo, displayed in its original proportions. */
 .brand{display:block;flex-shrink:0}.brand img{display:block;width:76px;height:auto}.landing-logo{display:block;width:210px;max-width:55vw;height:auto;margin:0 auto 30px}.landing{padding-top:42px}@media(max-width:600px){.brand img{width:62px}.landing-logo{width:170px;margin-bottom:25px}.landing{padding-top:32px}}
+
+.project-symbol{display:flex;width:76px;flex-shrink:0}.project-symbol svg{display:block;width:100%;height:auto}@media(max-width:600px){.project-symbol{width:50px}}
