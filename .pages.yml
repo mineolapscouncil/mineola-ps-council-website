@@ -220,6 +220,19 @@
           "required": true
         },
         {
+          "name": "style",
+          "label": "Card style",
+          "type": "select",
+          "default": "Secondary",
+          "options": {
+            "values": [
+              "Primary",
+              "Secondary"
+            ]
+          },
+          "description": "Primary: prominent green card for the main initiative. Secondary: smaller, quieter card for other links."
+        },
+        {
           "name": "eyebrow",
           "label": "Small label above title",
           "type": "string"

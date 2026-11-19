@@ -6,7 +6,7 @@ const url=safeUrl(card.url);
 const image=safeUrl(card.image);
 const external=url.startsWith('http');
 ---
-{url && <a class="project-link home-card" href={url} target={external?'_blank':undefined} rel={external?'noopener noreferrer':undefined}>
+{url && <a class:list={['project-link', 'home-card', {'home-card-secondary':card.style==='Secondary'}]} href={url} target={external?'_blank':undefined} rel={external?'noopener noreferrer':undefined}>
   {(image || card.icon) && <span class="project-symbol">
     {image ? <img src={image} alt={card.imageAlt||''} width="80" height="80" loading="lazy"/> : <span aria-hidden="true">
       {card.icon==='Playground' ? <PlaygroundIcon/> : <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">

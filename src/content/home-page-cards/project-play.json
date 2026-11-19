@@ -7,5 +7,6 @@
   "image": "",
   "imageAlt": "",
   "order": 1,
-  "visible": true
+  "visible": true,
+  "style": "Primary"
 }
