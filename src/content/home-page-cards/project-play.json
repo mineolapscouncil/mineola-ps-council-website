@@ -1,0 +1,11 @@
+{
+  "title": "Project Play",
+  "eyebrow": "Our playground fundraiser",
+  "description": "Help us build a new place to play.",
+  "url": "/project-play/",
+  "icon": "Playground",
+  "image": "",
+  "imageAlt": "",
+  "order": 1,
+  "visible": true
+}

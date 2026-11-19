@@ -199,6 +199,79 @@
           "type": "number"
         }
       ]
+    },
+    {
+      "name": "home-page-cards",
+      "label": "Home page cards",
+      "type": "collection",
+      "path": "src/content/home-page-cards",
+      "format": "json",
+      "filename": "{primary}.json",
+      "view": {
+        "primary": "title",
+        "sort": "order",
+        "order": "asc"
+      },
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "eyebrow",
+          "label": "Small label above title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "label": "Short description",
+          "type": "text"
+        },
+        {
+          "name": "url",
+          "label": "Link",
+          "type": "string",
+          "required": true,
+          "description": "Use /project-play/ for a page on this site, or a full https:// link."
+        },
+        {
+          "name": "icon",
+          "label": "Icon",
+          "type": "select",
+          "options": {
+            "values": [
+              "Playground",
+              "Calendar",
+              "Heart",
+              "Community"
+            ]
+          }
+        },
+        {
+          "name": "image",
+          "label": "Custom image (optional)",
+          "type": "image",
+          "description": "Replaces the icon when provided."
+        },
+        {
+          "name": "imageAlt",
+          "label": "Image description",
+          "type": "string"
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "type": "number",
+          "description": "Lower numbers appear first."
+        },
+        {
+          "name": "visible",
+          "label": "Show on homepage",
+          "type": "boolean"
+        }
+      ]
     }
   ]
 }

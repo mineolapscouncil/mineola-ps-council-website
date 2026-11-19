@@ -1,0 +1,19 @@
+---
+import PlaygroundIcon from './PlaygroundIcon.astro';
+import {safeUrl} from '../lib/content';
+const {card}=Astro.props;
+const url=safeUrl(card.url);
+const image=safeUrl(card.image);
+const external=url.startsWith('http');
+---
+{url && <a class="project-link home-card" href={url} target={external?'_blank':undefined} rel={external?'noopener noreferrer':undefined}>
+  {(image || card.icon) && <span class="project-symbol">
+    {image ? <img src={image} alt={card.imageAlt||''} width="80" height="80" loading="lazy"/> : <span aria-hidden="true">
+      {card.icon==='Playground' ? <PlaygroundIcon/> : <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+        {card.icon==='Calendar' ? <><rect x="12" y="18" width="56" height="50" rx="5"/><path d="M12 33h56M25 12v14M55 12v14M25 45h7M46 45h7M25 56h7"/></> : card.icon==='Heart' ? <path d="M40 65 15 41C-3 20 25 4 40 25 55 4 83 20 65 41Z"/> : <><circle cx="40" cy="23" r="10"/><circle cx="16" cy="32" r="7"/><circle cx="64" cy="32" r="7"/><path d="M23 66V54a17 17 0 0 1 34 0v12M6 64V53a11 11 0 0 1 13-11M74 64V53a11 11 0 0 0-13-11"/></>}
+      </svg>}
+    </span>}
+  </span>}
+  <span class="home-card-copy">{card.eyebrow&&<span class="eyebrow">{card.eyebrow}</span>}<h2>{card.title}</h2>{card.description&&<span>{card.description}</span>}</span>
+  <span class="arrow" aria-hidden="true">→</span>
+</a>}
