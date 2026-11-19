@@ -15,7 +15,12 @@
     "@astrojs/sitemap": "^3.7.5",
     "@tailwindcss/vite": "^4.3.5",
     "astro": "^7.4.12",
+    "marked": "^18.2.1",
+    "sanitize-html": "^2.18.2",
     "tailwindcss": "^4.3.5"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/sanitize-html": "^2.16.2"
+  }
 }

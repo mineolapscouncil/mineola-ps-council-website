@@ -136,7 +136,12 @@
         {
           "name": "description",
           "label": "Description",
-          "type": "text"
+          "type": "rich-text",
+          "description": "Use the toolbar for bold, italic, lists and links.",
+          "options": {
+            "format": "markdown",
+            "media": false
+          }
         },
         {
           "name": "start",
