@@ -2,11 +2,12 @@
   "title": "Project Play",
   "story": "Our old playground needs replacing. Together, we’re raising money for a new place for Mineola kids to play.",
   "goal": 100000,
-  "raised": 35000,
-  "lastUpdated": "2026-11-19",
+  "raised": 37503.27,
+  "lastUpdated": "2026-11-24",
   "ctaLabel": "Donate to Project Play",
   "ctaUrl": "https://peelschools.schoolcashonline.com/Fee/Details/136/145/false/true",
   "showProgress": true,
   "seoTitle": "Project Play | Mineola PS Council",
-  "seoDescription": "Help the Mineola school community create a new place to play. Follow campaign news and ways to support Project Play."
+  "seoDescription": "Help the Mineola school community create a new place to play. Follow campaign news and ways to support Project Play.",
+  "initialAllocation": 35500
 }

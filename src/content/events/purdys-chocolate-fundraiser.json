@@ -1,10 +1,11 @@
 {
   "title": "Purdys Chocolate Fundraiser 🍫",
-  "description": "Chocolate for you. A new playground for the kids. Everybody wins!\n\nStock up on Purdys treats for gifting, sharing or keeping for yourself. **100% of the fundraiser’s profits go toward Mineola’s new outdoor playscape.**\n\n**Order by:** Monday, November 23  \n**Pickup:** Week of December 14, with before- and after-school pickup times to be announced.\n\n**How to order:**\n\n- Choose **“Ship to coordinator”** for free delivery to the school.\n- Ordering for friends or family? Ask them to use their own name and email, and add your full name in brackets in the **First Name** field if you’ll collect their order.\n\n",
+  "description": "Thank you to everyone who ordered! **Purdys raised $1,744.27 for Project Play.**\n\nOrdering is now closed. Pickup will be the week of December 14, with before- and after-school times to be announced.",
   "start": "2026-11-01T00:00:00Z",
   "end": "2026-11-23T23:59:00Z",
-  "url": "https://fundraising.purdys.com/fundraising/campaign/000033458",
+  "url": "",
   "visible": true,
-  "status": "Running",
-  "ctaLabel": "Order Chocolates"
+  "status": "Closed",
+  "ctaLabel": "",
+  "amountRaised": 1744.27
 }
