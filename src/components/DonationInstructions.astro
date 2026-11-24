@@ -3,20 +3,19 @@ const {url,label='Donate to Project Play'}=Astro.props;
 ---
 <a class="button" href={url} target="_blank" rel="noopener noreferrer" data-donation-open>{label}</a>
 <dialog class="donation-dialog" aria-labelledby="donation-dialog-title">
-  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close donation instructions" autofocus>×</button></form>
-  <p class="eyebrow">Before you donate</p>
-  <h2 id="donation-dialog-title">Help your gift reach Project Play.</h2>
-  <p>On the Peel District School Board donation page:</p>
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close donation instructions">×</button></form>
+  <h2 id="donation-dialog-title" tabindex="-1" autofocus>Donate to Project Play</h2>
+  <p class="donation-lead">On the PDSB donation page:</p>
   <ol class="donation-steps">
     <li>Select <strong>Donate Directly to a School</strong>.</li>
-    <li>Under <strong>Fund Destination</strong>, choose <strong>Mineola Public School</strong>. Please double-check this so your gift goes to Mineola, rather than the board.</li>
-    <li>Enter your donation amount. Donations are eligible for a tax receipt.</li>
-    <li>In <strong>Message to School Board</strong>, enter the message below so your gift is directed to the School Council’s playground fundraiser.</li>
+    <li>Under <strong>Fund Destination</strong>, choose <strong>Mineola Public School</strong>. This ensures your gift goes to our school.</li>
+    <li>Enter your amount. Tax receipts are available.</li>
+    <li>In <strong>Message to School Board</strong>, paste:</li>
   </ol>
   <div class="donation-message"><code>Mineola SC “Project Play”</code><button type="button" class="copy-donation-message">Copy message</button></div>
   <p class="copy-status" role="status" aria-live="polite"></p>
-  <a class="button donation-continue" href={url} target="_blank" rel="noopener noreferrer">Continue to donation page</a>
-  <p class="donation-note">Opens in a new tab so you can refer back to these steps.</p>
+  <a class="button donation-continue" href={url} target="_blank" rel="noopener noreferrer">Continue to donate</a>
+  <p class="donation-note">Opens in a new tab.</p>
 </dialog>
 <script>
   const dialog=document.querySelector<HTMLDialogElement>('.donation-dialog');
@@ -24,6 +23,7 @@ const {url,label='Donate to Project Play'}=Astro.props;
     if(!dialog?.showModal)return;
     event.preventDefault();
     dialog.showModal();
+    dialog.querySelector<HTMLElement>('#donation-dialog-title')?.focus({preventScroll:true});
   });
   dialog?.addEventListener('click',(event)=>{
     if(event.target!==dialog)return;
