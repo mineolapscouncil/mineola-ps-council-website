@@ -4,18 +4,17 @@ const {url,label='Donate to Project Play'}=Astro.props;
 <a class="button" href={url} target="_blank" rel="noopener noreferrer" data-donation-open>{label}</a>
 <dialog class="donation-dialog" aria-labelledby="donation-dialog-title">
   <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close donation instructions">×</button></form>
-  <h2 id="donation-dialog-title" tabindex="-1" autofocus>Donate to Project Play</h2>
-  <p class="donation-lead">On the PDSB donation page:</p>
+  <h2 id="donation-dialog-title" tabindex="-1" autofocus>Help your gift reach Project Play.</h2>
+  <p class="donation-lead">Thank you for helping build a new place to play! On the donation page, please follow these three steps:</p>
   <ol class="donation-steps">
-    <li>Select <strong>Donate Directly to a School</strong>.</li>
-    <li>Under <strong>Fund Destination</strong>, choose <strong>Mineola Public School</strong>. This ensures your gift goes to our school.</li>
-    <li>Enter your amount. Tax receipts are available.</li>
-    <li>In <strong>Message to School Board</strong>, paste:</li>
+    <li>Choose your <strong>donation amount</strong>. All donations are eligible for a tax receipt.</li>
+    <li>Under <strong>Fund Destination</strong>, select <strong>Mineola Public School</strong>. Please double-check this—otherwise your donation goes to the board rather than our school.</li>
+    <li>In <strong>Message to School Board</strong>, enter the message below. This helps ensure your gift goes to the School Council’s <strong>Project Play playground fundraiser</strong>.</li>
   </ol>
   <div class="donation-message"><code>Mineola SC “Project Play”</code><button type="button" class="copy-donation-message">Copy message</button></div>
   <p class="copy-status" role="status" aria-live="polite"></p>
   <a class="button donation-continue" href={url} target="_blank" rel="noopener noreferrer">Continue to donate</a>
-  <p class="donation-note">Opens in a new tab.</p>
+  <p class="donation-note">Opens in a new tab so you can refer back to these steps.</p>
 </dialog>
 <script>
   const dialog=document.querySelector<HTMLDialogElement>('.donation-dialog');
