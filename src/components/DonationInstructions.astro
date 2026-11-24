@@ -1,0 +1,39 @@
+---
+const {url,label='Donate to Project Play'}=Astro.props;
+---
+<a class="button" href={url} target="_blank" rel="noopener noreferrer" data-donation-open>{label}</a>
+<dialog class="donation-dialog" aria-labelledby="donation-dialog-title">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close donation instructions" autofocus>×</button></form>
+  <p class="eyebrow">Before you donate</p>
+  <h2 id="donation-dialog-title">Help your gift reach Project Play.</h2>
+  <p>On the Peel District School Board donation page:</p>
+  <ol class="donation-steps">
+    <li>Select <strong>Donate Directly to a School</strong>.</li>
+    <li>Under <strong>Fund Destination</strong>, choose <strong>Mineola Public School</strong>. Please double-check this so your gift goes to Mineola, rather than the board.</li>
+    <li>Enter your donation amount. Donations are eligible for a tax receipt.</li>
+    <li>In <strong>Message to School Board</strong>, enter the message below so your gift is directed to the School Council’s playground fundraiser.</li>
+  </ol>
+  <div class="donation-message"><code>Mineola SC “Project Play”</code><button type="button" class="copy-donation-message">Copy message</button></div>
+  <p class="copy-status" role="status" aria-live="polite"></p>
+  <a class="button donation-continue" href={url} target="_blank" rel="noopener noreferrer">Continue to donation page</a>
+  <p class="donation-note">Opens in a new tab so you can refer back to these steps.</p>
+</dialog>
+<script>
+  const dialog=document.querySelector<HTMLDialogElement>('.donation-dialog');
+  document.querySelector('[data-donation-open]')?.addEventListener('click',(event)=>{
+    if(!dialog?.showModal)return;
+    event.preventDefault();
+    dialog.showModal();
+  });
+  dialog?.addEventListener('click',(event)=>{
+    if(event.target!==dialog)return;
+    const rect=dialog.getBoundingClientRect();
+    const mouse=event as MouseEvent;
+    if(mouse.clientX<rect.left||mouse.clientX>rect.right||mouse.clientY<rect.top||mouse.clientY>rect.bottom)dialog.close();
+  });
+  dialog?.querySelector('.copy-donation-message')?.addEventListener('click',async()=>{
+    const status=dialog.querySelector<HTMLElement>('.copy-status');
+    try{await navigator.clipboard.writeText('Mineola SC “Project Play”');if(status)status.textContent='Message copied.';}
+    catch{if(status)status.textContent='Select and copy the message above.';}
+  });
+</script>
